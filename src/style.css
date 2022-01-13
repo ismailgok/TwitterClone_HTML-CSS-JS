@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* * CSS command :start */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  box-sizing: border-box;
+}
+ul,li,a{
+  list-style-type: none;
+  text-decoration: none;
+}
+/* * CSS command :end */
+body{
+  height: 100vh;
+  background: #333232;
+  position: relative;
+}
+/* container CSS command :start */
+.container{
+  display:flex;
+  font-family: 'Roboto', sans-serif;
+  
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+}
+.container .row{
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  max-width: 1200px;
+  border:1px solid greenyellow;
+  height: auto;
+  position: relative;
+}
+
+/* container CSS command :end */
+
+/* lside CSS command :start */
+.lside {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border:1px solid aqua;
+  align-items: flex-start;
+  max-width: 300px;
+  position: relative;
+}
+
+.twittericon {
+  margin-top:12px;
+  border-radius: 9999px;
+  display:flex;
+  transform: translateX(20%);
+  padding: 5px;
+}
+.twittericon i:hover{
+  color:rgb(250, 250, 250);
+}
+  
+/* Twiter İcon */
+.twittericon i {
+  color: white;
+  font-size: 1.8rem;
+}
+
+/* Twitter Menu */
+.twittermenu {
+  margin-top: 5px;
+}
+
+/* Twitter Menu ul */
+
+.ultwitter-menu li:hover{
+  background: #3a3a3a;
+}
+
+.ultwitter-menu li {
+  border-radius: 9999px;
+  padding: 15px;
+  display: flex;
+  flex-direction: row; /*  Alt alta */
+  margin: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  
+}
+.ultwitter-menu li,a{
+  margin-left:15px;
+  font-size: 1.1rem;
+  color: #fff;
+  transition:all 0.5s ease;
+  font-weight: 300;
+}
+.ultwitter-menu li i{
+  width: 25px;
+  transition:all 0.5s ease;
+}
+.ultwitter-menu li:hover i{
+  color:black;
+}
+.ultwitter-menu li:hover a{
+  color:black;
+}
+
+.buttontweet {
+  
+  display: flex;
+  justify-content: center;
+  padding: 7px 38px;
+  border-radius: 9999px;
+  background-color: rgb(29, 155, 240);
+  color: white;
+  
+}
+
+.menutweet a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+ 
+}
+
+.lsprofile {
+  width: 70%;
+  position: absolute;
+  height: 70px;
+  display:flex;
+  flex-direction: row;
+  bottom:15px;
+  
+  border-radius: 9999px;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translateX(5%);
+  padding:10px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  
+}
+.lsprofile:hover{
+  background: #3a3a3a;
+}
+.lsprofile img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  
+}
+.lsprofile .lsidename{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+}
+.lsprofile .lsidename a{
+  font-size: 0.95rem;
+  margin-bottom:4px;
+  font-weight: 400;
+  min-width: 90px;
+}
+.lsprofile .lsidename span{
+  font-size: 0.68rem;
+  margin-left:0.78rem;
+  color:white;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.threedot{
+  min-width: 20px;
+  position: relative;
+}
+.threedot i{
+  margin-top:-8px;
+  position: absolute;
+  right: 0;
+  
+}
+
+.dropdown {
+  height: 150px;
+  position: absolute;
+  bottom:100px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: #2e2e2e;
+}
+/*Dropwdown */
+.dropdown .lsprofile{
+  top:0;
+  width: 90% !important;
+  height: 80px;
+  border-radius: 0 !important;
+  position: relative;
+  padding-bottom:20px;
+}
+.dropdown .lsprofile .threedot{
+  position: absolute;
+  right: 45px;
+}
+.dropdown .lsprofile:hover{
+  background: none;
+}
+
+.dropdown {
+  display: none;
+}
+
+.dropdown .drop-menu{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 85px;
+}
+.drop-menu li{
+  list-style-type: none;
+  padding:10px;
+  width: 100%;
+  cursor: pointer;
+}
+.drop-menu li:hover{
+  background: #4a4a4a;
+}
+.drop-menu li a{
+  font-size: 0.95rem;
+}
+
+.hidden{
+  display:none;
+}
+
+
+
+/* <div class="popbox">
+        <div class="x">
+        </div>
+        <div class="popchat">
+          <img src="" alt="">
+          <div class="chatarea">
+           <input type="textarea" name="" id="">
+           <a href="">Herkes yanıtlayabilir</a>
+          </div>
+        </div>
+        <div class="popfooter">
+          <ul>
+            <li><a href=""></a></li>
+          </ul>
+          <a href="">Tweetle</a>
+        </div>
+</div> */
+
+/* alt alta gelmesi için column */
+.popbox {
+  border: 1px solid red;
+  padding: 20px 20px;
+  display: none;
+  flex-direction: column;
+  background: black;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 300px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+
+}
+
+.popchat{
+  padding: 20px 20px;
+  display:flex;
+  flex-direction: row;
+}
+
+.popchat img {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  margin-top: 5px;
+  
+  
+}
+
+.chatarea{
+  display:flex;
+  flex-direction: column;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  margin-left: 5px;
+  border:1px solid red;
+}
+.chatarea .txtarea{
+  width: 90%;
+  height: 120px;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  border:none;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  
+}
+
+.popfooter {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.popnav{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.popfooter a {
+  display: flex;
+  width: 25px;
+  align-items: center;
+  
+}
+.popfooter a i{
+  border:1px solid green;
+}
+
+.everyoneResponse{
+  display:none;
+  position: absolute;
+  color:black;
+  bottom:65px;
+  left:15px;
+  font-size: 16px;
+  color:rgb(23, 23, 245);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.blur-filter {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+/* lside CSS command :end */
+
+/* center CSS command :start */
+.center {
+  display: flex;
+  flex-direction: column;
+  border:1px solid rgb(10, 186, 255);
+  flex-grow: 3;
+}
+
+/* center CSS command :end */
+
+/* rside CSS command :start */
+.rside {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border:1px solid black;
+  
+}
+/* rside CSS command :end */
+
