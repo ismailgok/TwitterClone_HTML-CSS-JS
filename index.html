@@ -8,18 +8,18 @@
 	<!-- FONTAWESOME -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-	<link href="src/style.css" rel="stylesheet" type="text/css" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <div class="popbox">
-        <div class="x">
-          <a href="">X</a>
-        </div>
-        <div class="popchat">
-          <img src="https://pbs.twimg.com/profile_images/1460701250643759106/HrBxj5bQ_400x400.jpg" alt="">
+	<div class="popbox">
+		<div class="x">
+			<a href=""><i class="fas fa-times"></i></a>
+		</div>
+		<div class="popchat">
+			<img src="https://pbs.twimg.com/profile_images/1460701250643759106/HrBxj5bQ_400x400.jpg" alt="">
           <div class="chatarea">
-           <textarea type="textarea" name="" class="txtarea"></textarea>
+           <textarea type="textarea" name="" class="txtarea" placeholder="Neler oluyor?"></textarea>
            <a href="" class="everyoneResponse">Herkes yanıtlayabilir</a>
            
           <div class="popfooter">
@@ -29,11 +29,36 @@
               <a href=""><i class="fas fa-poll-h"></i></a>          
               <a href=""><i class="fas fa-smile"></i></a>
             </div>         
-            <a class="buttontweet" href="">Tweetle</a>
+            <a class="buttontweeti" href="">Tweetle</a>
         </div>
           </div>
         </div>
+  </div>
+
+  <div class="retweetbox">
+    <div class="x">
+			<a href=""><i class="fas fa-times"></i></a>
+		</div>
+    <div class="popchat">
+      <img src="https://picsum.photos/id/237/400/400" alt="">
+      <div class="chatarea">
+      <textarea 
+      type="textarea" name="" class="txtarea" placeholder="Yanıtını Tweetle">
+      </textarea>
+      <div class="popfooter">
+        <div class="popnav">
+          <a href=""><i class="fas fa-image"></i></a>      
+          <a href=""><i class="fas fa-calendar-week"></i></a>        
+          <a href=""><i class="fas fa-poll-h"></i></a>          
+          <a href=""><i class="fas fa-smile"></i></a>
+        </div>
+        <a class="buttontweeti" href="">Tweetle</a>
+      </div>
     </div>
+    </div>
+  </div>
+
+
 	<!-- CONTAİNER START  -->
 	<div class="container">
 		<!-- ROW START  -->
@@ -41,26 +66,26 @@
 			<!-- LEFT SİDE START  -->
 			<div class="lside">
 				<div class="twittericon">
-					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="twittermenu">
         <ul class="ultwitter-menu">
-          <li><i class="fas fa-home"></i>
+          <li><i class="fas fa-home "></i>
             <a href="">Anasayfa</a>
           </li>
-          <li><i class="fas fa-hashtag"></i> 
+          <li><i class="fas fa-hashtag "></i> 
             <a href="">Keşfet</a>
           </li>
-          <li><i class="fas fa-bell"></i>
+          <li><i class="fas fa-bell "></i>
             <a href="">Bildirimler</a>
           </li>
-          <li><i class="fas fa-envelope"></i> 
+          <li><i class="fas fa-envelope "></i> 
             <a href="">Mesajlar</a>
           </li>
-          <li><i class="fas fa-envelope"></i>  
+          <li><i class="fas fa-envelope "></i>  
             <a href="">Yer İşaretleri</a>
           </li>
-          <li><i class="fas fa-list-alt"></i>
+          <li><i class="fas fa-list-alt "></i>
             <a href=""> Listeler</a>
           </li>
           <li><i class="fas fa-user"></i> 
@@ -78,7 +103,7 @@
       </div>
       
       <div class="dropdown">
-        <div class="lsprofile">
+        <div class="lsprofile borderalt">
         <img src="https://pbs.twimg.com/profile_images/1460701250643759106/HrBxj5bQ_400x400.jpg" alt="">
         <div class="lsidename">
          <a href="#">Simon Doe</a>
@@ -87,7 +112,6 @@
          </span>
         </div> 
         <a class="threedot" href=""><i class="fas fa-check"></i></a>
-        
       </div>
       <div class="drop-menu">
           <li>
@@ -112,9 +136,71 @@
 		<!-- LEFT SİDE END  -->
     
 		<!-- CENTER START  -->
-		<div class="center">
-      
-		</div>
+		<div class="center" id="center">
+      <div class="mainarea">
+        <div class="mainpage">
+         <span>Anasayfa</span>
+         <a href=""><i class="fas fa-fire"></i></a>
+        </div>
+        <div class="popbox1">
+		        <div class="popchat1">
+			            <img src="https://pbs.twimg.com/profile_images/1460701250643759106/HrBxj5bQ_400x400.jpg" alt="">
+                <div class="chatarea1">
+                  <textarea type="textarea" name="" class="txtarea1" placeholder="Neler oluyor?"></textarea>
+                  <a href="" class="everyoneResponse">Herkes yanıtlayabilir</a>
+                  <div class="popfooter1">
+                    <div class="popnav1"> 
+                      <a href=""><i class="fas fa-image"></i></a>      
+                      <a href=""><i class="fas fa-calendar-week"></i></a>        
+                      <a href=""><i class="fas fa-poll-h"></i></a>          
+                      <a href=""><i class="fas fa-smile"></i></a>
+                    </div>         
+                    <a class="buttontweeti" id="buttontweeti" href="#">Tweetle</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+        <div class="box"> 
+          <div class="tweetTitle">
+            <div class="titleImg">
+              <img src="https://picsum.photos/400/400" alt="">
+            </div>
+            <a href="">Sedat Sakmar</a>
+            <a href="" class="username">@Toqtir_</a>
+            <span>3s</span>
+            <span><i class="fas fa-ellipsis-h"></i></span>
+          </div>
+          <div class="row">
+            <div class="tweetContent">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, eius impedit saepe cum vero sequi quia
+                aperiam magnam qui et?</p>
+              <div class="tweetContentImg">
+                <img src="https://www.hobisi.com/wp-content/uploads/2019/05/resim-nedir-turleri-ve-stilleri.jpg" alt="">
+                <span>1:35</span>
+                <span>22.5B görüntülenme</span>
+              </div>
+            </div>
+            <div class="tweetNav">
+              <li>
+                <a id="comment" href="#"><i class="far fa-comment"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fas fa-retweet"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="far fa-heart"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fas fa-share-square"></i></a>
+              </li>
+            </div>
+          </div>
+        </div> -->
+    <!-- box  -->
+
+      </div>
+
     <!-- CENTER END  -->
     
     <!-- RIGHT SIDE START  -->
@@ -126,7 +212,7 @@
     <!-- ROW END  -->
 	</div>
 	<!-- CONTAİNER END  -->
-	<script src="src/script.js">
+	<script src="script.js">
 	</script>
 </body>
 
