@@ -30,17 +30,15 @@ ul,li,a{
 /* * CSS command :end */
 body{
   height: 100vh;
-  background: #333232;
+  background: black;
   position: relative;
 }
 /* container CSS command :start */
 .container{
   display:flex;
   font-family: 'Roboto', sans-serif;
-  
   justify-content: center;
   width: 100%;
-  height: 100vh;
 
 }
 .container .row{
@@ -48,23 +46,28 @@ body{
   flex-direction: row;
   width: 1200px;
   max-width: 1200px;
-  border:1px solid greenyellow;
   height: auto;
   position: relative;
+  justify-content: center;
+  
 }
 
 /* container CSS command :end */
 
 /* lside CSS command :start */
 .lside {
+  overflow: auto;
+  flex: 1;
+  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  border:1px solid aqua;
   align-items: flex-start;
-  max-width: 300px;
+  max-width: 252px;
   position: relative;
 }
+
 
 .twittericon {
   margin-top:12px;
@@ -79,8 +82,7 @@ body{
   
 /* Twiter İcon */
 .twittericon i {
-  color: white;
-  font-size: 1.8rem;
+  color: #D9D9D9;
 }
 
 /* Twitter Menu */
@@ -107,13 +109,13 @@ body{
 }
 .ultwitter-menu li,a{
   margin-left:15px;
-  font-size: 1.1rem;
-  color: #fff;
+  color: #D9D9D9;
   transition:all 0.5s ease;
   font-weight: 300;
+  font-size: 20px;
 }
 .ultwitter-menu li i{
-  width: 25px;
+  width: 26.25px;
   transition:all 0.5s ease;
 }
 .ultwitter-menu li:hover i{
@@ -123,15 +125,25 @@ body{
   color:black;
 }
 
-.buttontweet {
-  
+.buttontweeti{
   display: flex;
   justify-content: center;
   padding: 7px 38px;
   border-radius: 9999px;
   background-color: rgb(29, 155, 240);
-  color: white;
+  color: #D9D9D9;
   
+}
+
+.buttontweet {
+  width: 200px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 9999px;
+  background-color: rgb(29, 155, 240);
+  color: #D9D9D9;
 }
 
 .menutweet a {
@@ -141,7 +153,7 @@ body{
 }
 
 .lsprofile {
-  width: 70%;
+  width: 80%;
   position: absolute;
   height: 70px;
   display:flex;
@@ -173,6 +185,12 @@ body{
   justify-content: flex-start;
   
 }
+
+.borderalt {
+  height: 65px !important;
+  border-block-end: 1px solid rgb(47, 51, 54);
+}
+
 .lsprofile .lsidename a{
   font-size: 0.95rem;
   margin-bottom:4px;
@@ -182,7 +200,7 @@ body{
 .lsprofile .lsidename span{
   font-size: 0.68rem;
   margin-left:0.78rem;
-  color:white;
+  color:#D9D9D9;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -200,12 +218,16 @@ body{
 .dropdown {
   height: 150px;
   position: absolute;
-  bottom:100px;
+  bottom:100px !important;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  background: #2e2e2e;
+  background: black;
+  gap:10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(218, 216, 216, 0.5)
+  
 }
 /*Dropwdown */
 .dropdown .lsprofile{
@@ -239,6 +261,8 @@ body{
   padding:10px;
   width: 100%;
   cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 .drop-menu li:hover{
   background: #4a4a4a;
@@ -273,27 +297,28 @@ body{
 
 /* alt alta gelmesi için column */
 .popbox {
-  border: 1px solid red;
   padding: 20px 20px;
   display: none;
   flex-direction: column;
   background: black;
-  border-radius: 10px;
-  max-width: 600px;
-  max-height: 300px;
+  border-radius: 15px;
+  max-width: 550px;
+  border:1px solid;
+  max-height: 260px;
   margin: 0 auto;
   position: absolute;
+  color: #D9D9D9;
   left: 0;
   right: 0;
-  top: 0;
-  bottom: 0;
+  top: 5vh;
   z-index: 999;
+  box-shadow: 0px 0px 10px rgba(218, 216, 216, 0.5)
 
 }
-
 .popchat{
   padding: 20px 20px;
   display:flex;
+  color: #D9D9D9;
   flex-direction: row;
 }
 
@@ -301,8 +326,7 @@ body{
   width: 40px;
   height: 40px;
   border-radius: 9999px;
-  margin-top: 5px;
-  
+  margin-top: 15px;
   
 }
 
@@ -311,15 +335,16 @@ body{
   flex-direction: column;
   height: 200px;
   width: 100%;
+  color: #D9D9D9;
   position: relative;
   margin-left: 5px;
-  border:1px solid red;
+  
 }
 .chatarea .txtarea{
   width: 90%;
-  height: 120px;
+  height: 100px;
   background: black;
-  color: white;
+  color: #D9D9D9;
   border-radius: 5px;
   border:none;
   outline: none;
@@ -349,14 +374,10 @@ body{
   align-items: center;
   
 }
-.popfooter a i{
-  border:1px solid green;
-}
 
 .everyoneResponse{
   display:none;
   position: absolute;
-  color:black;
   bottom:65px;
   left:15px;
   font-size: 16px;
@@ -377,11 +398,232 @@ body{
 
 /* center CSS command :start */
 .center {
+  width: 600px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  border:1px solid rgb(10, 186, 255);
   flex-grow: 3;
+  border-right: 1px solid rgb(47, 51, 54);
+  border-left: 1px solid rgb(47, 51, 54);
 }
+
+.center .box {
+  overflow: auto;
+}
+
+.mainarea {
+  border-block-end: 1px solid rgb(47, 51, 54);
+
+}
+
+.mainpage {
+  color: #D9D9D9;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-family: inherit;
+  
+}
+
+.popbox1 {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  color: #D9D9D9;
+  background: black;
+  border-radius: 15px;
+  max-width: 600px;
+  max-height: 170px;
+}
+
+.popchat1{
+  display:flex;
+  color: #D9D9D9;
+  flex-direction: row;
+}
+
+.popchat1 img {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  margin-top: 15px;
+  
+  
+}
+
+.chatarea1{
+  display:flex;
+  color: #D9D9D9;
+  flex-direction: column;
+  height: 140px;
+  width: 100%;
+  position: relative;
+  margin-left: 5px;
+  
+}
+.chatarea1 .txtarea1{
+  width: 90%;
+  height: 100px;
+  background: black;
+  color: #D9D9D9;
+  border-radius: 5px;
+  border:none;
+  outline: none;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  
+}
+
+.popfooter1 {
+  width: 90%;
+  display: flex;
+  color: #D9D9D9;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.popnav1{
+  display: flex;
+  color: #D9D9D9;
+  flex-direction: row;
+  
+}
+
+.popfooter1 a {
+  display: flex;
+  color: #D9D9D9;
+  width: 25px;
+  align-items: center;
+  
+}
+
+.everyoneResponse1{
+  display:none;
+  position: absolute;
+  bottom:65px;
+  left:15px;
+  font-size: 16px;
+  color:rgb(23, 23, 245);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  border-block-end: 1px solid rgb(47, 51, 54);
+  height: auto;
+  color: #D9D9D9;
+  margin:20px 0px;
+  padding-bottom:20px;
+}
+
+.box .tweetTitle {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  color: #D9D9D9;
+  padding-left: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.box .tweetTitle span:last-child {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: #D9D9D9;
+}
+.box .tweetTitle .titleImg img {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background-size: cover;
+}
+.box .tweetTitle a{
+  max-width: 200px;
+  overflow: hidden;
+}
+.box .tweetTitle .username{
+  font-size: 13px;
+}
+.box .row {
+  display: flex;
+  margin:0 auto;
+  flex-direction: column;
+  color: #D9D9D9;
+  width: 75%;
+  justify-content: center;
+}
+.box .row .tweetContent{
+  overflow: hidden;
+  text-align: start;
+  margin-bottom:15px;
+  color: #D9D9D9;
+}
+.tweetContentImg{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #D9D9D9;
+}
+.tweetContentImg span{
+position: absolute;
+z-index: 999;
+bottom:0;
+color:#fff;
+background: #3a3a3a;
+margin:20px 10px 10px 20px;
+padding:1px;
+}
+.tweetContentImg span:last-child{
+  margin-left:60px;
+}
+.box .row .tweetContent p{
+  line-height: 22px;
+}
+.box .row .tweetContent img{
+  margin-top:15px;
+  background-size: cover;
+  border-radius: 15px;
+  width: 100%;
+}
+.box .row .tweetNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  
+}
+
+.retweetbox {
+  padding: 20px 20px;
+  display: none;
+  flex-direction: column;
+  background: black;
+  border-radius: 15px;
+  max-width: 550px;
+  border:1px solid;
+  max-height: 260px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5vh;
+  z-index: 999;
+  box-shadow: 0px 0px 10px rgba(218, 216, 216, 0.5)
+}
+
+
+
 
 /* center CSS command :end */
 
@@ -390,7 +632,7 @@ body{
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  border:1px solid black;
+  border-right:1px solid black;
   
 }
 /* rside CSS command :end */
