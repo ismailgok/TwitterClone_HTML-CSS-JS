@@ -29,9 +29,28 @@ ul,li,a{
 }
 /* * CSS command :end */
 body{
-  height: 100vh;
+  height: auto;
+  max-height: 100vh;
   background: black;
   position: relative;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 /* container CSS command :start */
 .container{
@@ -39,6 +58,7 @@ body{
   font-family: 'Roboto', sans-serif;
   justify-content: center;
   width: 100%;
+  min-height: 100vh;
 
 }
 .container .row{
@@ -58,7 +78,7 @@ body{
 .lside {
   overflow: auto;
   flex: 1;
-  height: 100vh;
+  max-height: 100vh;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -293,9 +313,7 @@ body{
           </ul>
           <a href="">Tweetle</a>
         </div>
-</div> 
-düzenlenecek bölüm
-*/
+</div> */
 
 /* alt alta gelmesi için column */
 .popbox {
@@ -402,6 +420,10 @@ düzenlenecek bölüm
 .center {
   width: 600px;
   max-width: 600px;
+  overflow: auto;
+  height: auto;
+  max-height: 1200px;
+
   display: flex;
   flex-direction: column;
   flex-grow: 3;
@@ -409,9 +431,7 @@ düzenlenecek bölüm
   border-left: 1px solid rgb(47, 51, 54);
 }
 
-.center .box {
-  overflow: auto;
-}
+
 
 .mainarea {
   border-block-end: 1px solid rgb(47, 51, 54);
@@ -605,7 +625,12 @@ padding:1px;
   font-size: 14px;
   
 }
-
+.timer{
+  margin-top:2px;
+  margin-left:12px;
+  font-size: 12px;
+  opacity: 0.7;
+}
 .retweetbox {
   padding: 20px 20px;
   display: none;
