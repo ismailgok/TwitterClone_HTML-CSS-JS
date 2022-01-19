@@ -60,51 +60,52 @@ buttontweeti.addEventListener('click', () => {
   var divBox = document.createElement('div');
   divBox.classList.add('box')
 
-  var divTweetTitle = document.createElement('div')
-  divTweetTitle.classList.add('tweetTitle')
-
-  var divTitleImg = document.createElement('div')
-  divTitleImg.classList.add('titleImg')
-  
-  var img = document.createElement('img')
-  img.src = "https://picsum.photos/400/400";
-  
-  var name = document.createElement('a')
-  name.innerHTML = "Alp"
-
-  var userName = document.createElement('a')
-  userName.innerHTML = "@alp"
-  
-  var row = document.createElement('div')
-  row.classList.add('row')
-
-  var tweetContent = document.createElement('div')
-  tweetContent.classList.add('tweetContent')
-  
-  var text = document.createElement('p')
-  text.innerHTML = tweetcontent.value;
-
-  tweetContent.appendChild(text)
-  row.appendChild(tweetContent)
-  // img titleIMG appendliyoruz
-  divTitleImg.appendChild(img)
-  // İsmi ve Kullınıcı Adını appendliyoruz
-  divTweetTitle.appendChild(name)
-  divTweetTitle.appendChild(userName)
-  // divTitleImg'i divTitle appendliyoruz
-  divTweetTitle.appendChild(divTitleImg)
-  
-  divBox.appendChild(divTweetTitle)
-  divBox.appendChild(row)
+  divBox.innerHTML = `
+          <div class="tweetTitle">
+            <div class="titleImg">
+              <img src="https://picsum.photos/400/400" alt="">
+            </div>
+            <a href="">alp</a>
+            <a href="" class="username">@Toqtir_</a>
+            <span>3s</span>
+            <span><i class="fas fa-ellipsis-h"></i></span>
+          </div>
+          <div class="row">
+            <div class="tweetContent">
+              <p>${tweetcontent.value}</p>
+              <div class="tweetContentImg">
+                <img src="https://www.hobisi.com/wp-content/uploads/2019/05/resim-nedir-turleri-ve-stilleri.jpg" alt="">
+                <span>1:35</span>
+                <span>22.5B görüntülenme</span>
+              </div>
+            </div>
+            <div class="tweetNav">
+              <li>
+                <a id="comment" href="#"><i class="far fa-comment"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fas fa-retweet"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="far fa-heart"></i></a>
+              </li>
+              <li>
+                <a href=""><i class="fas fa-share-square"></i></a>
+              </li>
+            </div>
+          </div>
+    
+     `
   document.getElementById("center").appendChild(divBox)
+  var list = document.getElementById("center");
+  list.insertBefore(divBox, list.childNodes[2])
   
-
 })
 
 let count = 0;
 
 async function getData(){
-  const users = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const users = await fetch('https://jsonplaceholder.typicode.com/users');
   let user = await users.json();
   console.log(user)
   return user;
@@ -122,14 +123,14 @@ async function showData(){
             <div class="titleImg">
               <img src="https://picsum.photos/400/400" alt="">
             </div>
-            <a href="">${item.title}</a>
-            <a href="" class="username">@Toqtir_</a>
+            <a href="">${item.name}</a>
+            <a href="" class="username">@${item.username}</a>
             <span>3s</span>
             <span><i class="fas fa-ellipsis-h"></i></span>
           </div>
           <div class="row">
             <div class="tweetContent">
-              <p>${item.body}</p>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error molestiae tempore culpa fugiat iusto iste reiciendis facilis dolore possimus neque!</p>
               <div class="tweetContentImg">
                 <img src="https://www.hobisi.com/wp-content/uploads/2019/05/resim-nedir-turleri-ve-stilleri.jpg" alt="">
                 <span>1:35</span>
@@ -204,7 +205,5 @@ async function showData(){
             </div>
           </div>
         </div>
-        
-        DÜZENLENECEK BÖLÜM
 
         */
