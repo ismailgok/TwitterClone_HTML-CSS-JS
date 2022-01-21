@@ -6,3 +6,7 @@
 
 
 <img src="https://github.com/ismailgok/TwitterClone_HTML-CSS-JS/blob/main/img/13.PNG?raw=true" />
+
+
+
+<img src="https://github.com/ismailgok/TwitterClone_HTML-CSS-JS/blob/main/img/14.PNG?raw=true" />
